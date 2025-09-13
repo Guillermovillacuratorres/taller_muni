@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>ver</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="box">
+    <h1>Listado de autos</h1>
+  </div>
+
+  <div class="boxCard">
+    @for(auto of autos; track auto.patente){
+    <ion-card>
+      <img alt="Silhouette of mountains" [src]="auto.imagen" />
+      <ion-card-header>
+        <ion-card-title>{{auto.marca}}</ion-card-title>
+        <ion-card-subtitle>{{auto.modelo}}</ion-card-subtitle>
+      </ion-card-header>    
+      <ion-card-content>
+        <small>{{auto.color}}</small>
+      </ion-card-content>
+    </ion-card>
+  }
+  </div>
+  
+
+</ion-content>

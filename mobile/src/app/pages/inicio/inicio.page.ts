@@ -27,7 +27,7 @@ export class InicioPage implements OnInit {
   }
 
   ver(){
-
+    this.router.navigateByUrl("ver");
   }
 
 
